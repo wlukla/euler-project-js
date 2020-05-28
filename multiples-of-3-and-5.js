@@ -12,3 +12,5 @@ const getMultiplesCountBelow = (of, below) => {
 
   return res;
 };
+
+console.log(getMultiplesCountBelow([3, 5], 1000));
