@@ -1,4 +1,4 @@
-const getSumSquareDifferenceForFirst = (n) => {
+const getSumSquareDifferenceForFirstBrute = (n) => {
   const numbers = [];
 
   for (let i = 0; i <= n; i += 1) {
@@ -13,4 +13,13 @@ const getSumSquareDifferenceForFirst = (n) => {
   return squareOfSum - sumOfSquares;
 };
 
-console.log(getSumSquareDifferenceForFirst(100));
+console.log(getSumSquareDifferenceForFirstBrute(100));
+
+const getSumSquareDifferenceForFirstEfficient = (n) => {
+  const squareOfSum = ((n * (n + 1)) / 2) ** 2;
+  const sumOfSquares = ((2 * n + 1) * (n + 1) * n) / 6;
+
+  return squareOfSum - sumOfSquares;
+};
+
+console.log(getSumSquareDifferenceForFirstEfficient(100));
